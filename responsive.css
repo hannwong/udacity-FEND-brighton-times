@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 549px) {
+  /*
+   * Reduce logo and title size, proportionate with smaller screen size.
+   * Remove horizontal margins, more space for hamburger icon on right.
+   * Reduce vertical margins, less vertical scrolling on small screen.
+   */
+  .header__logo {
+    height: 48px;
+  }
+  .header__title {
+    font-size: 2em;
+
+    /* Title height smaller than logo height. To center title vertically...*/
+    line-height: 48px;
+    /*
+     * Alternatively (and more correctly), to use vertical-align on the <img>,
+     * place it inside <h1>. Using this method with line-height so that our HTML
+     * is as close as possible to that given by Udacity.
+     * TODO: Correct this later.
+     */
+  }
+  .header__logo, .header__title {
+    margin: 2px 0;
+  }
+}
