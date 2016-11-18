@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
+.header__menu {
+  display: none;
+}
+
 @media screen and (max-width: 549px) {
   /*
    * Reduce logo and title size, proportionate with smaller screen size.
@@ -26,5 +30,20 @@
   }
   .header__logo, .header__title {
     margin: 2px 0;
+  }
+
+  /*
+   * Hamburger icon, inconspicuous gray. Right of title.
+   * Touch target for mobile must be 48px by 48px big.
+   */
+  .header__menu {
+    display: inline-block;
+    float: right;
+    margin: 2px 0;
+  }
+  .header__menu svg.hamburger {
+    width: 48px;
+    height: 48px;
+    fill: #e0e0e0;
   }
 }
