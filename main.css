@@ -183,6 +183,14 @@ main {
   font-size: 16px;
 }
 
+.news__title a {
+  padding: 1.5em;
+
+  /* Shift it back to be in line with title. */
+  position: relative;
+  top: -1.5em;
+}
+
 .top-news__item {
   border-bottom: 1px solid #E0E0E0;
   padding: 1em 0;
