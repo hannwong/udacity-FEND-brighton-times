@@ -46,4 +46,23 @@
     height: 48px;
     fill: #e0e0e0;
   }
+
+  /*
+   * Menu to be vertical list, positioned on left of screen, front of all else.
+   * Width 300px.
+   */
+  .nav {
+    z-index: 10;
+    background-color: #ffffff; /* Computed value is black. Best set this. */
+    width: 300px;
+
+    /* Default 'top' and 'left' as per 'static': right below header, and 0. */
+    position: absolute;
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0; /* Separator. */
+    width: 100%;
+    text-align: left;
+  }
 }
