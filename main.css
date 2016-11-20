@@ -105,6 +105,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -199,6 +200,12 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  /*
+   * Udacity code is wrong here --- '1.5em inherit'.
+   * Cannot to use 'inherit' in shorthand.
+   */
 }
 
 .top-news__item a:hover,
@@ -341,6 +348,9 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  /* Udacity code is wrong here, same for '.top-news__item a'. */
 }
 
 .snippet__title a:hover,
@@ -369,4 +379,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
 }
