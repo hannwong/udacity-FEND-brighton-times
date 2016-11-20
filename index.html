@@ -188,5 +188,23 @@
         </ul>
       </footer>
     </main>
+    <script>
+      /*
+       * Open the drawer when the menu icon is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      // Opens when hamburger icon is clicked.
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      // Closes when any part of 'main' is clicked.
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    </script>
   </body>
 </html>
