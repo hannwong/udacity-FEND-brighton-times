@@ -143,18 +143,37 @@ main {
 .hero {
   width: 100%;
   position: relative;
-  background-image: url("./images/dog.jpg");
   background-size: cover;
-  height: 300px;
+  max-height: 300px; /* Can shrink to better fit shorter images. */
+}
+
+/*
+ * Ensure img content box fills whole container.
+ * Centers image in content box, scales to 'cover'.
+ *
+ * Crude way for responsive image rather than intelligent, meaningful cropping.
+ * But this will do for now. Haven't yet learned responsive images by now.
+ * See this in action at 450px - 549px, 700px upwards.
+ *
+ * The Udacity lesson proposes tweak to avoid scaling. But I think image edges
+ * have no business being the focus on the image. This responsive tweak is
+ * way cooler, and also more challenging than just 'width: 100%'.
+ */
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .hero article {
+  overflow: auto; /* Allows arbitrary content lengths to be displayable. */
   box-sizing: border-box;
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
-  height: 40%;
+  max-height: 40%; /* Can shrink to better fit shorter text paragraphs. */
   width: 100%;
   color: #fff;
   padding: 1em;
