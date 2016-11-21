@@ -7,6 +7,16 @@
   display: none;
 }
 
+/*
+ * Put every segment's ordering on par first. For flex.
+ * Distribute extra space equally.
+ * For these segments, remove float (handled by flex) in main.css.
+ */
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+  flex-grow: 1;
+}
+
 @media screen and (max-width: 549px) {
   /*
    * Reduce logo and title size, proportionate with smaller screen size.
@@ -71,5 +81,55 @@
     border-bottom: 1px solid #e0e0e0; /* Separator. */
     width: 100%;
     text-align: left;
+  }
+}
+
+/*
+ * Limited space, place only feature story on top row. Then weather beside.
+ * Portable tablet, readers probably want weather info on-the-go.
+ * Corresponds with Bootstrap's "small".
+ */
+@media screen and (min-width: 550px) {
+  .hero {
+    order: 0;
+    width: 60%;
+  }
+  .weather {
+    order: 1;
+    width: 40%;
+  }
+}
+
+/*
+ * Laptop size. Big enough to contain weather on 2nd row.
+ * Display feature story and top news on 1st row. Scores and weather on 2nd.
+ * Corresponds with Bootstrap's "medium".
+ */
+@media screen and (min-width: 700px) {
+  .hero {
+    width: 50%;
+  }
+  .top-news {
+    order: 1;
+    width: 50%;
+  }
+  .scores {
+    order: 2;
+    width: 60%;
+  }
+  .weather {
+    order: 3;
+  }
+}
+
+/*
+ * Desktop size. Limit size to 850px.
+ * Corresponds with Bootstrap's "large", but slightly smaller.
+ */
+@media screen and (min-width: 850px) {
+  main, .header__inner, .nav, .content {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
