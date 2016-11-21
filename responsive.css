@@ -98,6 +98,11 @@
     order: 1;
     width: 40%;
   }
+
+  /* Ensure weather icon and temperature stays on single line. */
+  .weather__today__image {
+    width: 50%;
+  }
 }
 
 /*
