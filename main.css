@@ -169,7 +169,11 @@ main {
 
 .top-news {
   width: 100%;
-  height: 300px;
+
+  /* Udacity code correct to limit height, but neglects 'overflow' visible. */
+  max-height: 300px;
+  overflow: auto;
+
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
 }
@@ -181,6 +185,7 @@ main {
   font-size: 16px;
 }
 
+/* Udacity code misses the '+ more' touch target. */
 .news__title a {
   padding: 1.5em;
 
@@ -227,6 +232,10 @@ main {
  */
 
 .scores {
+  /*
+   * Udacity code wrong here. Width still needed. 'flex-grow' only distributes
+   * extra space, does not indicate proportions of widths among flex items.
+   */
   width: 100%;
   padding-top: 1em;
 }
@@ -275,6 +284,7 @@ main {
  */
 
 .weather {
+  /* Udacity code wrong here, same as for ''.scores'. */
   width: 100%;
   padding: 1em;
 }
